@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Inter';font-size: 22px;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="images/Angelina_Wang_Resume.pdf" download>Resume</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="design-archive">
+      <div class="container">
+      <h1>Design Archive</h1>
+      <p>Welcome to my design archive! Here, you'll find all the infographics, zines, and art projects I've created.</p>
+      <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="images/beabadoobee.png" style="width:100%">
+    <div class="text">Fun little poster design for beabadoobee! - Figma, Procreate</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="images/lamp.png" style="width:100%">
+    <div class="text">Lamp magazine - Figma</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="images/clothes.png" style="width:100%">
+    <div class="text">Fashion spread - Figma</div>
+  </div>
+  <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="images/miffy.png" style="width:100%">
+      <div class="text">Miffy magazine spread (first ever zine!) - Figma</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+
+</div>
+      
+      
+      
+      <div class="design-projects">
+          <!-- Add your design projects here -->
+          <div class="project">
+              <img src="images/flyer.JPG" alt="Design 1">
+              <p>Spirit Week Flyer - Figma, Procreate</p>
+          </div>
+          <div class="project">
+              <img src="images/flyer2.JPG" alt="Design 2">
+              <p>Spirit Week Flyer Pt2 - Figma, Procreate</p>
+          </div>
+          <div class="project">
+              <img src="images/menchies.JPG" alt="Design 2">
+              <p>Menchie's Fundraiser Flyer - Procreate </p>
+          </div>
+          <div class="project">
+              <img src="images/film.png" alt="Design 2">
+              <p>Film Club Camera Workshop Flyer - Canva</p>
+          </div>
+          <div class="project">
+              <img src="images/dualhacks.png" alt="Design 2">
+              <p>Codology's DualHacks Recap Thumbnail - Figma</p>
+          </div>
+      </div>
+  </div>
+    </div>
+    <
+    <footer>
+      <p>&copy; 2025 Angelina Wang | All rights reserved</p>
+  </footer>
+</body>
+</html>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
